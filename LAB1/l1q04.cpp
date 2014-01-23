@@ -11,13 +11,15 @@ int main (){
   cout << "Game: Guess the correct number(int).\n";
   
   srand (time(NULL));
-  ans = rand()%100;
+  ans = rand()%10;
 
-  while(s != "y"){
+  while(true){
   	cout << "Make a guess.\n";
   	cin >> number;
   	
-  	if(number == ans){
+  	if(number < 0){
+      break;
+    }else if(number == ans){
   		cout << "You Got it Right!\n";
   		break;
   	}else if(number > ans){
@@ -26,8 +28,6 @@ int main (){
   		cout << "You should try a greater number.\n";
   	}
 
-  	cout << "Want to quit?(y/n).\n";
-  	cin >> s;
   }
   cout << "End of the game.\n";
   return 0;
