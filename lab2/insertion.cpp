@@ -25,7 +25,7 @@ int greaternum(){ // the algorithm only performs correctly if we start
       num = x[i];
     }
   } 
-  return num;
+  return num;//max number
 }
 
 void insert( int newY ) {
