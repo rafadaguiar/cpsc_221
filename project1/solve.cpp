@@ -19,8 +19,8 @@
 #include "ArrayStack.hpp"
 #include "VectorPriorityQueue.hpp"
 // TODO:  implement these classes
-//#include "LinkedListStack.hpp"
-#include "ArrayQueue.hpp"
+#include "LinkedListStack.hpp" // DONE
+#include "ArrayQueue.hpp" // DONE
 //#include "HeapPriorityQueue.hpp"
 #include "ComparePuzzleBadness.hpp"
 
@@ -125,7 +125,8 @@ int main (int argc, char *argv[])
   // Later, you will put declarations here to use your new implementations
   // (ArrayQueue, LinkedListStack, and HeapPriorityQueue).
   // LinkedListQueue<PuzzleState*> activeStates;
-  ArrayQueue<PuzzleState*> activeStates; //  (WORKING)
+  ArrayQueue<PuzzleState*> activeStates; //  (DONE)
+  // LinkedListStack<PuzzleState*> activeStates; //  (DONE)
   //ArrayStack<PuzzleState*> activeStates; //  (WORKING)
   // VectorPriorityQueue<PuzzleState*, ComparePuzzleBadness> activeStates;
 

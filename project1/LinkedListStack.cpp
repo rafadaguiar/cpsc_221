@@ -9,11 +9,82 @@
 #include <iostream>
 
 
-// TODO: declare a templated LinkedListStack that extends TodoList.
-//
-// We leave this entire file (and the corresponding header file) to you.
-// Please use LinkedListQueue as a starting point!  This will be
-// different, but you needn't start from scratch!
+template <typename T>
+LinkedListStack<T>::LinkedListStack()
+{
+  root = NULL;
+}
+
+template <typename T>
+void LinkedListStack<T>::add(T elem)
+{
+  node * temp = new node();
+  temp->val = elem;
+  temp->next = root;
+  root = temp; 
+}
+
+template <typename T>
+T LinkedListStack<T>::remove()
+{
+  assert(root!=NULL);
+  node * temp = new node();
+  temp = root;
+  root = root->next;
+  temp = NULL;
+  return root->val;
+
+}
+
+template <typename T>
+T LinkedListStack<T>::get_next()
+{
+  assert(root!=NULL);
+  return root->val;
+}
+
+template <typename T>
+int LinkedListStack<T>::size()
+{
+  int count = 0;
+  node *current = root;
+  while(current){
+    current = current->next;
+    count++;
+  }
+  return count;
+}
+
+// template <typename T>
+// void LinkedListStack<T>::ensure_capacity(int n)
+// {
+//   if (capacity < n) {
+//     // Make plenty of room.
+//     int target_capacity = (n > 2*capacity+1) ? n : (2*capacity+1);
+
+//     // Set the current array aside and make room for the new one.
+//     T * oldarray = array;
+//     array = new T[target_capacity];
+
+//     // Copy each element of the old array over.
+//     for (int i = 0; i < top; i++) {
+//       array[i] = oldarray[i];
+//     }
+
+//     capacity = target_capacity;
+
+//     delete [] oldarray;
+//   }
+// }
+
+
+template <typename T>
+LinkedListStack<T>::~LinkedListStack()
+{
+  while(root){
+    this->remove();    
+  } 
+}
 
 
 #endif

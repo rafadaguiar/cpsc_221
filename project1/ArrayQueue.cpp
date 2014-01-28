@@ -23,7 +23,7 @@ ArrayQueue<T>::ArrayQueue()
   back = 0;
   // TODO:
   // USE A DYNAMIC ARRAY!!!!!!!!
-  //array =  new T[INIT_SIZE];
+  // array =  new T[INIT_SIZE];
 }
 
 template <typename T>

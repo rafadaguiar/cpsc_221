@@ -5,6 +5,7 @@
 #include "TodoList.hpp"
 #include "ArrayStack.hpp"
 #include "ArrayQueue.hpp"
+#include "LinkedListStack.hpp"
 #include "Compare.hpp"
 
 
@@ -25,7 +26,8 @@ int main(int argc, char * argv[]) {
   }
 
   //TodoList<int> * todolist = new ArrayStack<int>();  //  WORKING
-  TodoList<int> * todolist = new ArrayQueue<int>();  // TEsting
+  // TodoList<int> * todolist = new ArrayQueue<int>();  // TODO: use dynamic arrays
+  TodoList<int> * todolist = new LinkedListStack<int>(); // DONE
 
   char command;
   int val;
