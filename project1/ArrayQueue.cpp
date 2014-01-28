@@ -23,43 +23,35 @@ ArrayQueue<T>::ArrayQueue()
   back = 0;
   // TODO:
   // USE A DYNAMIC ARRAY!!!!!!!!
+  //array =  new T[INIT_SIZE];
 }
 
 template <typename T>
 void ArrayQueue<T>::add(T elem)
 {
-  this->myarray[back] = elem;
-  this->back = (back+1) % this->size();
+  array[back] = elem;
+  back = (back+1) % this->size();
 }
 
 template <typename T>
 T ArrayQueue<T>::remove()
 {
   T x;
-  x = this->myarray[front];
-  this->front = (front+1) % this->size(); 
+  x = array[front];
+  front = (front+1) % this->size(); 
   return x;
 }
 
 template <typename T>
 T ArrayQueue<T>::get_next()// peak at the beginning of the queue
 {
-  return this->myarray[front];
+  return array[front];
 }
 
 template <typename T>
 int ArrayQueue<T>::size()
 {
-  return sizeof(this->myarray)/sizeof(this->myarray[0]);
-}
-
-template <typename T>
-void ArrayQueue<T>::show(){
-  for (int i = 0; i < this->size(); ++i)
-  {
-    cout << this->myarray[i];
-  }
-  cout <<endl;
+  return sizeof(array)/sizeof(array[0]);
 }
 
 // TODO: implement ensure_capacity (but leave this for last/the final submission.. just start with lots of capacity!)
@@ -84,6 +76,7 @@ void ArrayQueue<T>::ensure_capacity(int n)
     // This part should be easy if you followed the warning above!
 
     // TODO: Delete the old array.
+    // delete[] array;
   }
 }
 
@@ -92,9 +85,7 @@ template <typename T>
 ArrayQueue<T>::~ArrayQueue()
 {
   // TODO: implement the destructor
-
-  // do any cleanup like deallocating
-  // any dynamically allocated memory
+  // delete[] array;
 }
 
 #endif

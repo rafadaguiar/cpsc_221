@@ -32,7 +32,7 @@ class ArrayQueue: public TodoList<T>
 	// INIT_SIZE to a large enough number such that you can avoid resizing 
 	// the array in ensure_capacity. For your final submission, set INIT_SIZE 
 	// to a small enough number such that the the array does resize at some point.
-  static const int INIT_SIZE = 6;
+  static const int INIT_SIZE = 5;
 
  private:
   // A helper function that consumes a number and ensures the queue
@@ -44,11 +44,11 @@ class ArrayQueue: public TodoList<T>
 
   // a pointer to the underlying array with elements of type T
   // use an explicit pointer, NOT T array[..] so you can resize.
+  //T * array;  
   // Reminder: remember to to implement the queue as a circular array.
   // Points will be deducted if the array is not circular
-  //T * array;
-  T myarray [INIT_SIZE];
-  // TODO: list additional private member variables here
+
+  T array [INIT_SIZE];
   int front, back;
 };
 

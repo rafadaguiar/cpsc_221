@@ -4,6 +4,7 @@
 #include <iostream>
 #include "TodoList.hpp"
 #include "ArrayStack.hpp"
+#include "ArrayQueue.hpp"
 #include "Compare.hpp"
 
 
@@ -23,7 +24,8 @@ int main(int argc, char * argv[]) {
     cerr << "\t(accepts no parameters)" << endl;
   }
 
-  TodoList<int> * todolist = new ArrayStack<int>();
+  //TodoList<int> * todolist = new ArrayStack<int>();  //  WORKING
+  TodoList<int> * todolist = new ArrayQueue<int>();  // TEsting
 
   char command;
   int val;
