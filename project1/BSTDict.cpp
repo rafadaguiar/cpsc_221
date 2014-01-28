@@ -68,7 +68,12 @@ bool BSTDict<T, Compare>::find(T key, T &pred) {
       // Use compare to figure out which subtree
       // the key should be in.  It's NOT in the root.  Inspecting the code
       // below should help!
-			current = current->left;
+			if (compare < 0){
+        current = current->left;  
+      }else{
+        current = current->right;
+      }
+      
     }
 
   if (current == NULL) {

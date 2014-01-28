@@ -27,13 +27,12 @@ void LinkedListStack<T>::add(T elem)
 template <typename T>
 T LinkedListStack<T>::remove()
 {
-  assert(root!=NULL);
+  assert(root!=NULL&&root->next!=NULL);
   node * temp = new node();
   temp = root;
   root = root->next;
-  temp = NULL;
+  temp->next = NULL;
   return root->val;
-
 }
 
 template <typename T>
@@ -81,9 +80,9 @@ int LinkedListStack<T>::size()
 template <typename T>
 LinkedListStack<T>::~LinkedListStack()
 {
-  while(root){
-    this->remove();    
-  } 
+  // while(root){
+  //   this->remove();    
+  // } 
 }
 
 

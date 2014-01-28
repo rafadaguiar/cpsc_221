@@ -29,12 +29,13 @@ class LinkedListStack: public TodoList<T>{
       // better style--and functionality--to make the argument (and all 
       // of our parameters) unsigned ints rather than ints.. but things
       // are complex enough for this assignment!
+      
       //void ensure_capacity(int n);
 
       // a pointer to the underlying list with elements of type T
       struct node{
         node * next;
-        int val;
+        T val;
       };
       node * root;
 };

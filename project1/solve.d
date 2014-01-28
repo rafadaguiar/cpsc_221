@@ -3,8 +3,8 @@ solve.o: solve.cpp PuzzleState.hpp WolfGoatCabbage.hpp SliderPuzzle.hpp \
  ArrayStack.hpp ArrayStack.cpp VectorPriorityQueue.hpp Compare.hpp \
  VectorPriorityQueue.cpp LinkedListStack.hpp LinkedListStack.cpp \
  ArrayQueue.hpp ArrayQueue.cpp ComparePuzzleBadness.hpp NullDict.hpp \
- PredDict.hpp LinkedListDict.hpp LinkedListDict.cpp \
- ComparePuzzleState.hpp
+ PredDict.hpp LinkedListDict.hpp LinkedListDict.cpp BSTDict.hpp \
+ BSTDict.cpp ComparePuzzleState.hpp
 
 PuzzleState.hpp:
 
@@ -47,5 +47,9 @@ PredDict.hpp:
 LinkedListDict.hpp:
 
 LinkedListDict.cpp:
+
+BSTDict.hpp:
+
+BSTDict.cpp:
 
 ComparePuzzleState.hpp:

@@ -27,7 +27,9 @@ int main(int argc, char * argv[]) {
 
   //TodoList<int> * todolist = new ArrayStack<int>();  //  WORKING
   // TodoList<int> * todolist = new ArrayQueue<int>();  // TODO: use dynamic arrays
+  // cout << "Using ArrayQueue"<<endl;
   TodoList<int> * todolist = new LinkedListStack<int>(); // DONE
+  cout << "Using LinkedListStack"<<endl;
 
   char command;
   int val;

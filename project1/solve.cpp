@@ -26,8 +26,8 @@
 
 #include "NullDict.hpp"
 #include "LinkedListDict.hpp"
-// TODO:  finish this class
-// #include "BSTDict.hpp"
+
+#include "BSTDict.hpp"
 #include "ComparePuzzleState.hpp"
 
 using namespace std;
@@ -124,16 +124,22 @@ int main (int argc, char *argv[])
   // TODO:  Uncomment one of these, to select BFS, DFS, or BestFS
   // Later, you will put declarations here to use your new implementations
   // (ArrayQueue, LinkedListStack, and HeapPriorityQueue).
+  
   // LinkedListQueue<PuzzleState*> activeStates;
-  ArrayQueue<PuzzleState*> activeStates; //  (DONE)
+  
+  // ArrayQueue<PuzzleState*> activeStates; //  (DONE)
+  // cout << "Using ArrayQueue"<<endl;
+  
   // LinkedListStack<PuzzleState*> activeStates; //  (DONE)
-  //ArrayStack<PuzzleState*> activeStates; //  (WORKING)
+  // cout << "Using LinkedListStack"<<endl;
+  
+  ArrayStack<PuzzleState*> activeStates; //  (WORKING)
   // VectorPriorityQueue<PuzzleState*, ComparePuzzleBadness> activeStates;
 
   // TODO:  Uncomment one of these to pick the dictionary implementation
   // NullDict<PuzzleState*> seenStates;
-  LinkedListDict<PuzzleState*, ComparePuzzleState> seenStates;
-  // BSTDict<PuzzleState*, ComparePuzzleState> seenStates;
+  //LinkedListDict<PuzzleState*, ComparePuzzleState> seenStates; // WORKING
+  BSTDict<PuzzleState*, ComparePuzzleState> seenStates; // DONE
 
   vector<PuzzleState*> solution;
 
