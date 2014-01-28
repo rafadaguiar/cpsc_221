@@ -46,7 +46,7 @@ class ArrayQueue: public TodoList<T>
   // use an explicit pointer, NOT T array[..] so you can resize.
   // Reminder: remember to to implement the queue as a circular array.
   // Points will be deducted if the array is not circular
-  T * array;
+  //T * array;
   T myarray [INIT_SIZE];
   // TODO: list additional private member variables here
   int front, back;

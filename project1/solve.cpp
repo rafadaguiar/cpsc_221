@@ -125,13 +125,13 @@ int main (int argc, char *argv[])
   // Later, you will put declarations here to use your new implementations
   // (ArrayQueue, LinkedListStack, and HeapPriorityQueue).
   // LinkedListQueue<PuzzleState*> activeStates;
-  ArrayStack<PuzzleState*> activeStates;
+  ArrayQueue<PuzzleState*> activeStates; //  (WORKING)
+  //ArrayStack<PuzzleState*> activeStates; //  (WORKING)
   // VectorPriorityQueue<PuzzleState*, ComparePuzzleBadness> activeStates;
 
   // TODO:  Uncomment one of these to pick the dictionary implementation
   // NullDict<PuzzleState*> seenStates;
-  LinkedListDict<PuzzleState*, ComparePuzzleState> seenStates; //(WORKING)
-  ArrayQueue<PuzzleState*, ComparePuzzleState> seenStates;
+  LinkedListDict<PuzzleState*, ComparePuzzleState> seenStates;
   // BSTDict<PuzzleState*, ComparePuzzleState> seenStates;
 
   vector<PuzzleState*> solution;

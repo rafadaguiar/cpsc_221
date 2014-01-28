@@ -19,13 +19,10 @@ using namespace std;
 template <typename T>
 ArrayQueue<T>::ArrayQueue()
 { 
-  //array = &myarray;
   front = 0;
   back = 0;
-  // Constructor: initialize member variables
-  //              and do any other initialization
-  //              needed (if any)
-  // TODO: implement constructor
+  // TODO:
+  // USE A DYNAMIC ARRAY!!!!!!!!
 }
 
 template <typename T>
