@@ -8,7 +8,7 @@ Acknowledgment that you understand and have followed the course's
 collaboration policy (READ IT at
 http://www.ugrad.cs.ubc.ca/~cs221/current/syllabus.shtml#conduct):
 
-TODO: [[Put your names here again as signature]]
+                    Rafael Aguiar
 
 TODO: submit using: make handin-milestone1
 

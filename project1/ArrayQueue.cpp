@@ -18,7 +18,10 @@ using namespace std;
 // of TodoList
 template <typename T>
 ArrayQueue<T>::ArrayQueue()
-{
+{ 
+  //array = &myarray;
+  front = 0;
+  back = 0;
   // Constructor: initialize member variables
   //              and do any other initialization
   //              needed (if any)
@@ -26,31 +29,40 @@ ArrayQueue<T>::ArrayQueue()
 }
 
 template <typename T>
-void ArrayQueue<T>::add(T /*elem*/)
+void ArrayQueue<T>::add(T elem)
 {
-  // TODO: uncomment parameter name (commented out so you don't get a warning)
-  // TODO: implement add method
+  this->myarray[back] = elem;
+  this->back = (back+1) % this->size();
 }
 
 template <typename T>
 T ArrayQueue<T>::remove()
 {
-  return (T)0;
-  // TODO: implement remove method
+  T x;
+  x = this->myarray[front];
+  this->front = (front+1) % this->size(); 
+  return x;
 }
 
 template <typename T>
-T ArrayQueue<T>::get_next()
+T ArrayQueue<T>::get_next()// peak at the beginning of the queue
 {
-  return (T)0;
-  // TODO: implement get_next method
+  return this->myarray[front];
 }
 
 template <typename T>
 int ArrayQueue<T>::size()
 {
-  return 0;
-  // TODO: implement size method
+  return sizeof(this->myarray)/sizeof(this->myarray[0]);
+}
+
+template <typename T>
+void ArrayQueue<T>::show(){
+  for (int i = 0; i < this->size(); ++i)
+  {
+    cout << this->myarray[i];
+  }
+  cout <<endl;
 }
 
 // TODO: implement ensure_capacity (but leave this for last/the final submission.. just start with lots of capacity!)

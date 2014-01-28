@@ -20,7 +20,7 @@
 #include "VectorPriorityQueue.hpp"
 // TODO:  implement these classes
 //#include "LinkedListStack.hpp"
-//#include "ArrayQueue.hpp"
+#include "ArrayQueue.hpp"
 //#include "HeapPriorityQueue.hpp"
 #include "ComparePuzzleBadness.hpp"
 
@@ -130,7 +130,8 @@ int main (int argc, char *argv[])
 
   // TODO:  Uncomment one of these to pick the dictionary implementation
   // NullDict<PuzzleState*> seenStates;
-  LinkedListDict<PuzzleState*, ComparePuzzleState> seenStates;
+  LinkedListDict<PuzzleState*, ComparePuzzleState> seenStates; //(WORKING)
+  ArrayQueue<PuzzleState*, ComparePuzzleState> seenStates;
   // BSTDict<PuzzleState*, ComparePuzzleState> seenStates;
 
   vector<PuzzleState*> solution;

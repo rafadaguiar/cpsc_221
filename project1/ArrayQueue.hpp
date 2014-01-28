@@ -25,14 +25,14 @@ class ArrayQueue: public TodoList<T>
   T remove();
   T get_next();
   int size();
-
+  void show();
   ~ArrayQueue(); // destructor
 
 	// Note: For your milestone submission, you may feel free to change 
 	// INIT_SIZE to a large enough number such that you can avoid resizing 
 	// the array in ensure_capacity. For your final submission, set INIT_SIZE 
 	// to a small enough number such that the the array does resize at some point.
-  static const int INIT_SIZE = 5;
+  static const int INIT_SIZE = 6;
 
  private:
   // A helper function that consumes a number and ensures the queue
@@ -47,8 +47,9 @@ class ArrayQueue: public TodoList<T>
   // Reminder: remember to to implement the queue as a circular array.
   // Points will be deducted if the array is not circular
   T * array;
-
+  T myarray [INIT_SIZE];
   // TODO: list additional private member variables here
+  int front, back;
 };
 
 #include "ArrayQueue.cpp"
