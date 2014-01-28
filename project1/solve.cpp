@@ -130,10 +130,10 @@ int main (int argc, char *argv[])
   // ArrayQueue<PuzzleState*> activeStates; //  (DONE)
   // cout << "Using ArrayQueue"<<endl;
   
-  // LinkedListStack<PuzzleState*> activeStates; //  (DONE)
-  // cout << "Using LinkedListStack"<<endl;
+  LinkedListStack<PuzzleState*> activeStates; //  (DONE)
+  cout << "Using LinkedListStack"<<endl;
   
-  ArrayStack<PuzzleState*> activeStates; //  (WORKING)
+  // ArrayStack<PuzzleState*> activeStates; //  (WORKING)
   // VectorPriorityQueue<PuzzleState*, ComparePuzzleBadness> activeStates;
 
   // TODO:  Uncomment one of these to pick the dictionary implementation
