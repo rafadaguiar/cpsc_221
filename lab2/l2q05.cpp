@@ -27,7 +27,7 @@ int main () {
                 // p1 contains (address of x); p2 contains (address of x)
   cout << p1 <<endl;
 
-  *p1 = *p2+10; // x contains (25); y contains (25)
+  *p1 = *p2+10; // x contains (25); y contains (15)
                 // p1 contains (address of x); p2 contains (address of x)
   cout << *p1 <<endl;
   return 0;

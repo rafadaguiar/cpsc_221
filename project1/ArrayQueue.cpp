@@ -21,24 +21,26 @@ ArrayQueue<T>::ArrayQueue()
 { 
   front = 0;
   back = 0;
-  // TODO:
-  // USE A DYNAMIC ARRAY!!!!!!!!
-  // array =  new T[INIT_SIZE];
+  capacity = 0;
+  array =  new T[INIT_SIZE];
 }
 
 template <typename T>
 void ArrayQueue<T>::add(T elem)
 {
   array[back] = elem;
-  back = (back+1) % this->size();
+  back = (back+1) % INIT_SIZE;
+  capacity++;
 }
 
 template <typename T>
 T ArrayQueue<T>::remove()
 {
+  assert(capacity > 0);
   T x;
   x = array[front];
-  front = (front+1) % this->size(); 
+  front = (front+1) % INIT_SIZE;
+  capacity--; 
   return x;
 }
 
@@ -51,7 +53,7 @@ T ArrayQueue<T>::get_next()// peak at the beginning of the queue
 template <typename T>
 int ArrayQueue<T>::size()
 {
-  return sizeof(array)/sizeof(array[0]);
+  return capacity;
 }
 
 // TODO: implement ensure_capacity (but leave this for last/the final submission.. just start with lots of capacity!)

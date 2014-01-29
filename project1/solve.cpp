@@ -15,19 +15,18 @@
 #include "SliderPuzzle.hpp"
 #include "Sudoku.hpp"
 
-#include "LinkedListQueue.hpp"
-#include "ArrayStack.hpp"
-#include "VectorPriorityQueue.hpp"
-// TODO:  implement these classes
-#include "LinkedListStack.hpp" // DONE
-#include "ArrayQueue.hpp" // DONE
-//#include "HeapPriorityQueue.hpp"
+#include "LinkedListQueue.hpp"      // WORKING
+#include "ArrayStack.hpp"           // WORKING
+#include "VectorPriorityQueue.hpp"  // WORKING
+#include "LinkedListStack.hpp"      // DONE
+#include "ArrayQueue.hpp"           // DONE
+#include "HeapPriorityQueue.hpp"    // WORKING
 #include "ComparePuzzleBadness.hpp"
 
-#include "NullDict.hpp"
-#include "LinkedListDict.hpp"
+#include "NullDict.hpp"             // WORKING
+#include "LinkedListDict.hpp"       // WORKING
 
-#include "BSTDict.hpp"
+#include "BSTDict.hpp"              // DONE
 #include "ComparePuzzleState.hpp"
 
 using namespace std;
@@ -52,8 +51,9 @@ void solvePuzzle(PuzzleState *start, TodoList<PuzzleState*> &active, PredDict<Pu
     // Note:  Do not delete this, as this PuzzleState is also in 'seen'
 
     // TODO: uncomment the next two lines for debugging, if you'd like!
-    //cout << "Exploring State: \n";
-    //state->print(cout);
+    cout << "Exploring State: \n";
+    state->print(cout);
+    cin.get();
 
     if (state->isSolution()) {
       // Found a solution!
@@ -116,7 +116,7 @@ int main (int argc, char *argv[])
 
   // Note: 1/2 of all positions are not possible.  If a run takes a huge
   // amount of time, try exchanging two adjacent numbers and trying again.
-  // startState = new SliderPuzzle(3,3,"8 7 6 5 4 3 2 1 0");
+  // startState = new SliderPuzzle(3,3,"8 7 6 5 4 3 1 2 0");
   // startState = new SliderPuzzle(3,4,"11 10 9 8 7 6 5 4 3 1 2 0");
   // startState = new SliderPuzzle(4,4,"15 14 13 12 11 10 9 8 7 6 5 4 3 1 2 0");
 
@@ -125,21 +125,27 @@ int main (int argc, char *argv[])
   // Later, you will put declarations here to use your new implementations
   // (ArrayQueue, LinkedListStack, and HeapPriorityQueue).
   
-  // LinkedListQueue<PuzzleState*> activeStates;
-  
+  // LinkedListQueue<PuzzleState*> activeStates; // WORKING
+  // cout<<"Using LinkedListQueue"<<endl;
+
   // ArrayQueue<PuzzleState*> activeStates; //  (DONE)
   // cout << "Using ArrayQueue"<<endl;
   
-  LinkedListStack<PuzzleState*> activeStates; //  (DONE)
-  cout << "Using LinkedListStack"<<endl;
+  // LinkedListStack<PuzzleState*> activeStates; //  (DONE)
+  // cout << "Using LinkedListStack"<<endl; //Sudoku::LLDict::1.90s, Sudoku::BSTDict::2.30s
   
-  // ArrayStack<PuzzleState*> activeStates; //  (WORKING)
+  ArrayStack<PuzzleState*> activeStates; //  (WORKING)
+  cout << "Using ArrayStack"<<endl; //Sudoku::LLDict::1.89s, Sudoku::BSTDict::2.27s
+  
   // VectorPriorityQueue<PuzzleState*, ComparePuzzleBadness> activeStates;
 
   // TODO:  Uncomment one of these to pick the dictionary implementation
-  // NullDict<PuzzleState*> seenStates;
-  //LinkedListDict<PuzzleState*, ComparePuzzleState> seenStates; // WORKING
-  BSTDict<PuzzleState*, ComparePuzzleState> seenStates; // DONE
+  NullDict<PuzzleState*> seenStates;
+  cout<<"Using NullDict"<<endl;
+  // LinkedListDict<PuzzleState*, ComparePuzzleState> seenStates; // WORKING
+  // cout<<"Using LLDict"<<endl;
+  // BSTDict<PuzzleState*, ComparePuzzleState> seenStates; // DONE
+  //cout<<"Using BSTDict"<<endl;
 
   vector<PuzzleState*> solution;
 

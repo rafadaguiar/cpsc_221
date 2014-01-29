@@ -1,8 +1,6 @@
 Student Name #1: Rafael Aguiar
 Student ugrad login #1: b3z8
 
-Student Name #2: TODO: 
-Student ugrad login #2: TODO: 
 
 Acknowledgment that you understand and have followed the course's
 collaboration policy (READ IT at
@@ -19,9 +17,12 @@ Questions:
 (For the explanations, generally a sentence or two should be enough.)
 
 1.  Could BFS solve Wolf-Goat-Cabbage, using NullDict?
+    No, it doesn't keep track of the states and it ends up bouncing between Wolf-Goat-Cabbage
+    (sometimes even moving one of the three without the boat).
 
 2.  What happened when you tried to use DFS to solve Wolf-Goat-Cabbage
 using NullDict?  Briefly explain why this happened.
+    It kept bringing the goat from one side of the river to the other. 
 
 3.  Which of BFS, DFS, and BestFS (using the TodoList implementations
 we provided) correctly solve Wolf-Goat-Cabbage, using LinkedListDict?

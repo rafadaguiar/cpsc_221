@@ -44,12 +44,10 @@ class ArrayQueue: public TodoList<T>
 
   // a pointer to the underlying array with elements of type T
   // use an explicit pointer, NOT T array[..] so you can resize.
-  //T * array;  
+  T * array;  
   // Reminder: remember to to implement the queue as a circular array.
   // Points will be deducted if the array is not circular
-
-  T array [INIT_SIZE];
-  int front, back;
+  int front, back, capacity;
 };
 
 #include "ArrayQueue.cpp"
