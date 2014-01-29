@@ -1,0 +1,48 @@
+Student Name #1: Rafael Aguiar
+Student ugrad login #1: b3z8
+
+
+Acknowledgment that you understand and have followed the course's
+collaboration policy (READ IT at
+http://www.ugrad.cs.ubc.ca/~cs221/current/syllabus.shtml#conduct):
+
+                    Rafael Aguiar
+
+TODO: submit using: make handin-milestone1
+
+----------------------------------------------------------------------
+
+Questions:
+
+(For the explanations, generally a sentence or two should be enough.)
+
+1.  Could BFS solve Wolf-Goat-Cabbage, using NullDict?
+
+2.  What happened when you tried to use DFS to solve Wolf-Goat-Cabbage
+using NullDict?  Briefly explain why this happened.
+
+3.  Which of BFS, DFS, and BestFS (using the TodoList implementations
+we provided) correctly solve Wolf-Goat-Cabbage, using LinkedListDict?
+
+4.  Could BFS solve Sudoku?  What happened?  Briefly explain why.
+
+5.  Could DFS solve Sudoku?  What happened?  Briefly explain why.
+
+6.  Could BestFS solve Sudoku?
+
+7.  Using LinkedListDict, try using BFS and DFS to solve the 3x3
+Slider Puzzle.  What happened?
+
+8.  Using LinkedListDict, try using BestFS to solve the 3x3
+Slider Puzzle.  How long did this take?
+
+9.  Using LinkedListDict, use BestFS to solve the 3x4 and 4x4
+Slider Puzzles we provided.  How long did these take?  Which
+computer did you use?
+
+10. Explain your results from Question 7.
+
+----------------------------------------------------------------------
+
+We will also be checking whether you have correctly implemented
+the ArrayQueue (with the exception of ensure_capacity, which you can leave until the final submission), LinkedListStack and BSTDict classes.

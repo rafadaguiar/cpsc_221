@@ -1,0 +1,49 @@
+Student Name #1: TODO:
+Student ugrad login #1: TODO:
+
+Student Name #2: TODO:
+Student ugrad login #2: TODO:
+
+Team name (for fun!): TODO:
+
+Acknowledgment that you understand and have followed the course's
+collaboration policy (READ IT at
+http://www.ugrad.cs.ubc.ca/~cs221/current/syllabus.shtml#conduct):
+
+TODO: [[Put your names here again as a signature]]
+
+TODO: submit using: make handin-proj1
+
+----------------------------------------------------------------------
+
+Approximate hours on project: TODO:
+
+----------------------------------------------------------------------
+
+For teams, rough breakdown of work: TODO:
+
+----------------------------------------------------------------------
+
+Acknowledgment of assistance: TODO:
+
+----------------------------------------------------------------------
+
+High-level (more abstract) description of your stack, queue, priority 
+queue, and BST implementations, including any problems or surprises: TODO:
+
+
+----------------------------------------------------------------------
+
+If you didn't complete Milestone 1, please answer the 10 questions
+in the MILESTONE1.txt file.
+
+----------------------------------------------------------------------
+
+Question 11:  With your implementation of BSTDict and HeapPriorityQueue,
+how long does BestFS take to solve the 4x4 Slider Puzzle?  Compare
+your answer to your previous answer to Question 9.
+
+----------------------------------------------------------------------
+
+We will be checking your implementations of ArrayQueue, LinkedListStack,
+HeapPriorityQueue, and BSTDict.
