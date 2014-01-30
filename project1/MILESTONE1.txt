@@ -35,7 +35,7 @@ we provided) correctly solve Wolf-Goat-Cabbage, using LinkedListDict?
         ## Yes, and fast.
 7.  Using LinkedListDict, try using BFS and DFS to solve the 3x3
 Slider Puzzle.  What happened?
-    ## They runned forever(over 5min), consumed alot of memory and never finished.
+    ## They runned over 10min, consumed alot of memory and didn't finish.
 8.  Using LinkedListDict, try using BestFS to solve the 3x3
 Slider Puzzle.  How long did this take?
     ## 0.139s
@@ -43,6 +43,7 @@ Slider Puzzle.  How long did this take?
 Slider Puzzles we provided.  How long did these take?  Which
 computer did you use?
     ## 3x4(1.781s), 4x4(3minutes and 2.692s)
+    ## MacbookAir(I5 1.7GHz,4GB RAM)
 10. Explain your results from Question 7.
     --##
 ----------------------------------------------------------------------
