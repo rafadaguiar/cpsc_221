@@ -116,7 +116,7 @@ int main (int argc, char *argv[])
 
   // Note: 1/2 of all positions are not possible.  If a run takes a huge
   // amount of time, try exchanging two adjacent numbers and trying again.
-  startState = new SliderPuzzle(3,3,"7 8 6 5 4 3 2 1 0");
+  startState = new SliderPuzzle(3,3,"8 7 6 5 4 3 2 1 0");
   // startState = new SliderPuzzle(3,4,"11 10 9 8 7 6 5 4 3 1 2 0");
   // startState = new SliderPuzzle(4,4,"15 14 13 12 11 10 9 8 7 6 5 4 3 1 2 0");
 
@@ -131,14 +131,14 @@ int main (int argc, char *argv[])
   // ArrayQueue<PuzzleState*> activeStates; //  (Not working on puzzles)
   // cout << "Using ArrayQueue"<<endl;
   
-  LinkedListStack<PuzzleState*> activeStates; //  (DONE)
-  cout << "Using LinkedListStack"<<endl; //Sudoku::LLDict::1.90s, Sudoku::BSTDict::2.30s
+  // LinkedListStack<PuzzleState*> activeStates; //  (DONE)
+  // cout << "Using LinkedListStack"<<endl; //Sudoku::LLDict::1.90s, Sudoku::BSTDict::2.30s
   
   // ArrayStack<PuzzleState*> activeStates; //  (WORKING)
   // cout << "Using ArrayStack"<<endl; //Sudoku::LLDict::1.89s, Sudoku::BSTDict::2.27s
   
-  // VectorPriorityQueue<PuzzleState*, ComparePuzzleBadness> activeStates;
-  // cout<<"Using VectorPriorityQueue"<<endl;
+  VectorPriorityQueue<PuzzleState*, ComparePuzzleBadness> activeStates;
+  cout<<"Using VectorPriorityQueue"<<endl;
   
   // Uncomment one of these to pick the dictionary implementation:
   
