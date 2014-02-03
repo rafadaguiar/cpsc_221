@@ -86,8 +86,7 @@ void ArrayQueue<T>::ensure_capacity(int n)
 template <typename T>
 ArrayQueue<T>::~ArrayQueue()
 {
-  // TODO: implement the destructor
-  // delete[] array;
+  delete[] array;
 }
 
 #endif

@@ -18,7 +18,7 @@ Questions:
 
 1.  Could BFS solve Wolf-Goat-Cabbage, using NullDict?
         ## Yes, it finishes the program with the right answer. 
-        --Although it completely ignored the rules of the game(no steps shown). 
+        ## Although it completely ignored the rules of the game(no steps shown). 
     
 2.  What happened when you tried to use DFS to solve Wolf-Goat-Cabbage
 using NullDict?  Briefly explain why this happened.
@@ -29,7 +29,8 @@ we provided) correctly solve Wolf-Goat-Cabbage, using LinkedListDict?
         ## All three of them.
 
 4.  Could BFS solve Sudoku?  What happened?  Briefly explain why.
-        --## No. It looked like it was doing the right job, but it was painfully slow.
+        ## No. It looked like it was doing the right job, but it was painfully slow; 
+        ## and the probable reason is the amount of states represented on the tree.
 
 5.  Could DFS solve Sudoku?  What happened?  Briefly explain why.
         ## Yes. Solved the problem fast.
@@ -52,8 +53,9 @@ computer did you use?
         ## MacbookAir(I5 1.7GHz,4GB RAM)
 
 10. Explain your results from Question 7.
-        --## They use a lot of memory to keep track of the path and even start to write on disk,
-        ## turning the whole algorithm really slow.
+        ## They used a lot of memory to keep track of the path and even started to write on disk,
+        ## turning the whole algorithm really slow. Here, I think that the same explanation in (4) applies,
+        ## too many states on the tree to compute in reasonable time.
 
 ----------------------------------------------------------------------
 
