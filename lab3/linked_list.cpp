@@ -33,9 +33,23 @@ void print( Node* head ) {
 // This function deletes the last element in the linked list.
 // Pre-condition: The head of a linked list is provided.
 // Post-condition: The last element of that linked list has been removed.
-void delete_last_element( Node*& head )
+void delete_last_element( Node* &head )
 {
-  //please write your own code here
+  Node *l1,*l2;
+  l1 = l2 = head;
+  if(head != NULL){
+    while(l2->next != NULL){
+        l1 = l2;//
+        l2 = l2->next;
+    }
+    if(l1 != NULL){
+      l1->next = NULL;
+    }
+    if (l1 == l2 and head == l1){
+      head = NULL;
+      // cout << "Empty list"<<endl;
+    }
+  }
 }
 
 // This function inserts a key after a node with a given key.
@@ -97,26 +111,26 @@ int main() {
   cout << "<E> List 1: ";
   print( list1 );
 
-  insert(list1, 11);
-  insert_after(list1, 11, 12);
-  cout << "<F> List 1: ";
-  print( list1 );
+  // insert(list1, 11);
+  // insert_after(list1, 11, 12);
+  // cout << "<F> List 1: ";
+  // print( list1 );
 
-  insert_after(list1, 13, 14);
-  cout << "<G> List 1: ";
-  print( list1 );
+  // insert_after(list1, 13, 14);
+  // cout << "<G> List 1: ";
+  // print( list1 );
 
-  list4 = interleave(list1, list2);
-  cout << "<H> List 4: ";
-  print( list4 );
+  // list4 = interleave(list1, list2);
+  // cout << "<H> List 4: ";
+  // print( list4 );
 
-  list4 = interleave(list1, list3);
-  cout << "<I> List 4: ";
-  print( list4 );
+  // list4 = interleave(list1, list3);
+  // cout << "<I> List 4: ";
+  // print( list4 );
 
-  list4 = interleave(list3, list3);
-  cout << "<J> List 4: ";
-  print( list4 );
+  // list4 = interleave(list3, list3);
+  // cout << "<J> List 4: ";
+  // print( list4 );
 
   return 0;
 }
