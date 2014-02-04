@@ -35,8 +35,7 @@ void print( Node* head ) {
 // Post-condition: The last element of that linked list has been removed.
 void delete_last_element( Node* &head )
 {
-  Node *l1,*l2;
-  l1 = l2 = head;
+  Node *l1=head,*l2=head;
   if(head != NULL){
     while(l2->next != NULL){
         l1 = l2;//
@@ -61,7 +60,21 @@ void delete_last_element( Node* &head )
 // contains a new node (newKey) after that node.
 void insert_after( Node* head, int key, int newKey )
 {
-  //please write your own code here
+  Node *temp=head, *newNode = new Node;
+  while(temp!=NULL){
+    if(temp->key == key){
+      newNode->key = newKey;
+      if(temp->next==NULL){
+        temp->next = newNode;
+      }
+      else{
+        newNode->next = temp->next;
+        temp->next = newNode;
+      }
+      break;
+    }
+    temp = temp->next;
+  }
 }
 
 // This function merges two linked lists.
@@ -111,14 +124,14 @@ int main() {
   cout << "<E> List 1: ";
   print( list1 );
 
-  // insert(list1, 11);
-  // insert_after(list1, 11, 12);
-  // cout << "<F> List 1: ";
-  // print( list1 );
+  insert(list1, 11);
+  insert_after(list1, 11, 12);
+  cout << "<F> List 1: ";
+  print( list1 );
 
-  // insert_after(list1, 13, 14);
-  // cout << "<G> List 1: ";
-  // print( list1 );
+  insert_after(list1, 13, 14);
+  cout << "<G> List 1: ";
+  print( list1 );
 
   // list4 = interleave(list1, list2);
   // cout << "<H> List 4: ";
