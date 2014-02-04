@@ -86,8 +86,29 @@ void insert_after( Node* head, int key, int newKey )
 // For example: [1, 2] and [3, 4, 5] would return [1, 3, 2, 4, 5]
 Node* interleave( Node* list1, Node* list2 )
 {
-  //please write your own code here to replace "return NULL" below
-  return NULL;
+  Node *newHead, *temp;
+  
+  if(list1 != NULL){
+    newHead = new Node;
+    newHead->key = list1->key;
+    list1 = list1->next;
+    temp = newHead;
+  }
+  while(list1 != NULL or list2 != NULL){
+    if (list2 != NULL){
+      temp->next = new Node;
+      temp->next->key = list2->key;
+      list2 = list2->next;
+      temp = temp->next;
+    }
+    if (list1 != NULL){
+      temp->next = new Node;
+      temp->next->key = list1->key;
+      list1 = list1->next;
+      temp = temp->next;
+    }
+  }
+  return newHead;
 }
 
 int main() {
@@ -96,6 +117,7 @@ int main() {
   Node * list2 = NULL;
   Node * list3 = NULL;
   Node * list4 = NULL;
+  Node * list5 = NULL;
 
   insert( list1, 1);
   insert( list1, 2);
@@ -133,17 +155,23 @@ int main() {
   cout << "<G> List 1: ";
   print( list1 );
 
-  // list4 = interleave(list1, list2);
-  // cout << "<H> List 4: ";
-  // print( list4 );
+  list4 = interleave(list1, list2);
+  cout << "<H> List 4: ";
+  print( list4 );
 
-  // list4 = interleave(list1, list3);
-  // cout << "<I> List 4: ";
-  // print( list4 );
+  list5 = interleave(list4, list1);
+  
 
-  // list4 = interleave(list3, list3);
-  // cout << "<J> List 4: ";
-  // print( list4 );
+  list4 = interleave(list1, list3);
+  cout << "<I> List 4: ";
+  print( list4 );
+
+  list4 = interleave(list3, list3);
+  cout << "<J> List 4: ";
+  print( list4 );
+
+  cout << "<J> List 5: ";
+  print( list5 );
 
   return 0;
 }
