@@ -80,9 +80,9 @@ int LinkedListStack<T>::size()
 template <typename T>
 LinkedListStack<T>::~LinkedListStack()
 {
-  // while(root){
-  //   this->remove();    
-  // } 
+  while(root){
+    this->remove();    
+  } 
 }
 
 

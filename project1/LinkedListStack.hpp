@@ -21,17 +21,7 @@ class LinkedListStack: public TodoList<T>{
       int size();
       virtual ~LinkedListStack();
 
-    //static const int INIT_SIZE = 5;
-
     private:
-      // A helper function that consumes a number and ensures the queue
-      // has enough space for that many elements.  (In C++, it might be
-      // better style--and functionality--to make the argument (and all 
-      // of our parameters) unsigned ints rather than ints.. but things
-      // are complex enough for this assignment!
-      
-      //void ensure_capacity(int n);
-
       // a pointer to the underlying list with elements of type T
       struct node{
         node * next;
