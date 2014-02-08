@@ -170,8 +170,8 @@ int main() {
   cout << "<J> List 4: ";
   print( list4 );
 
-  cout << "<J> List 5: ";
-  print( list5 );
+  // cout << "<J> List 5: ";
+  // print( list5 );
 
   return 0;
 }

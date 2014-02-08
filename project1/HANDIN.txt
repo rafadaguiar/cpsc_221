@@ -10,7 +10,7 @@ Acknowledgment that you understand and have followed the course's
 collaboration policy (READ IT at
 http://www.ugrad.cs.ubc.ca/~cs221/current/syllabus.shtml#conduct):
 
-TODO: [[Put your names here again as a signature]]
+TODO: Rafael Aguiar
 
 TODO: submit using: make handin-proj1
 
@@ -20,11 +20,11 @@ Approximate hours on project: TODO:
 
 ----------------------------------------------------------------------
 
-For teams, rough breakdown of work: TODO:
+For teams, rough breakdown of work: None(Single)
 
 ----------------------------------------------------------------------
 
-Acknowledgment of assistance: TODO:
+Acknowledgment of assistance: None
 
 ----------------------------------------------------------------------
 
@@ -35,7 +35,7 @@ queue, and BST implementations, including any problems or surprises: TODO:
 ----------------------------------------------------------------------
 
 If you didn't complete Milestone 1, please answer the 10 questions
-in the MILESTONE1.txt file.
+in the MILESTONE1.txt file. [Completed]
 
 ----------------------------------------------------------------------
 

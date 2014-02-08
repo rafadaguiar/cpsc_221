@@ -32,7 +32,7 @@ class ArrayQueue: public TodoList<T>
 	// INIT_SIZE to a large enough number such that you can avoid resizing 
 	// the array in ensure_capacity. For your final submission, set INIT_SIZE 
 	// to a small enough number such that the the array does resize at some point.
-  static const int INIT_SIZE = 500;
+  static const int INIT_SIZE = 4;
 
  private:
   // A helper function that consumes a number and ensures the queue
@@ -47,7 +47,7 @@ class ArrayQueue: public TodoList<T>
   T * array;  
   // Reminder: remember to to implement the queue as a circular array.
   // Points will be deducted if the array is not circular
-  int front, back, capacity;
+  int front, back, capacity,num_elem;
 };
 
 #include "ArrayQueue.cpp"
