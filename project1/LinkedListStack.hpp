@@ -9,7 +9,7 @@
 #include "TodoList.hpp"
 
 
-// TODO: declare a templated LinkedListStack that extends TodoList.
+// declare a templated LinkedListStack that extends TodoList.
 //
 template <typename T>
 class LinkedListStack: public TodoList<T>{

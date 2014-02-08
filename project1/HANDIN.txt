@@ -1,16 +1,12 @@
-Student Name #1: TODO:
-Student ugrad login #1: TODO:
+Student Name #1: Rafael Aguiar
+Student ugrad login #1: b3z8
 
-Student Name #2: TODO:
-Student ugrad login #2: TODO:
-
-Team name (for fun!): TODO:
 
 Acknowledgment that you understand and have followed the course's
 collaboration policy (READ IT at
 http://www.ugrad.cs.ubc.ca/~cs221/current/syllabus.shtml#conduct):
 
-TODO: Rafael Aguiar
+Rafael Aguiar
 
 TODO: submit using: make handin-proj1
 

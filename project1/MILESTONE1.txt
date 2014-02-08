@@ -8,7 +8,7 @@ http://www.ugrad.cs.ubc.ca/~cs221/current/syllabus.shtml#conduct):
 
                     Rafael Aguiar
 
-TODO: submit using: make handin-milestone1
+submit using: make handin-milestone1
 
 ----------------------------------------------------------------------
 

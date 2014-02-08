@@ -8,7 +8,7 @@
 #include <cstring>
 #include <cstdlib>
 
-// TODO: include any .hpp files of classes that you create and use here
+// include any .hpp files of classes that you create and use here
 // You may not need any!
 #include "PuzzleState.hpp"
 #include "WolfGoatCabbage.hpp"
@@ -50,7 +50,7 @@ void solvePuzzle(PuzzleState *start, TodoList<PuzzleState*> &active, PredDict<Pu
     state = active.remove();
     // Note:  Do not delete this, as this PuzzleState is also in 'seen'
 
-    // TODO: uncomment the next two lines for debugging, if you'd like!
+    // uncomment the next two lines for debugging, if you'd like!
     // cout << "Exploring State: \n";
     // state->print(cout);
     // cin.get();
@@ -106,7 +106,7 @@ int main (int argc, char *argv[])
 
   PuzzleState *startState;
 
-  // TODO: Initialize startState with an object of the type of puzzle you want solved.
+  // Initialize startState with an object of the type of puzzle you want solved.
   // For some kinds of puzzles, you will want to pass in a parameter
   // to specify the starting position (e.g., for the 8- or 15-puzzles.)
 
@@ -121,7 +121,7 @@ int main (int argc, char *argv[])
   // startState = new SliderPuzzle(4,4,"15 14 13 12 11 10 9 8 7 6 5 4 3 1 2 0");
 
 
-  // TODO:  Uncomment one of these, to select BFS, DFS, or BestFS
+  // Uncomment one of these, to select BFS, DFS, or BestFS
   // Later, you will put declarations here to use your new implementations
   // (ArrayQueue, LinkedListStack, and HeapPriorityQueue).
   

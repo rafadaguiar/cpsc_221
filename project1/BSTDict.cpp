@@ -62,7 +62,7 @@ bool BSTDict<T, Compare>::find(T key, T &pred) {
       // but it seems clearer to make the loop guard above stand alone.
       int compare = Compare()(key, current->key);
 
-      // TODO: correct the following line!  
+      // correct the following line!  
       // (The right direction isn't always left, as they say.)
       // 
       // Use compare to figure out which subtree

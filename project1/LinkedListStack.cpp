@@ -54,29 +54,6 @@ int LinkedListStack<T>::size()
   return count;
 }
 
-// template <typename T>
-// void LinkedListStack<T>::ensure_capacity(int n)
-// {
-//   if (capacity < n) {
-//     // Make plenty of room.
-//     int target_capacity = (n > 2*capacity+1) ? n : (2*capacity+1);
-
-//     // Set the current array aside and make room for the new one.
-//     T * oldarray = array;
-//     array = new T[target_capacity];
-
-//     // Copy each element of the old array over.
-//     for (int i = 0; i < top; i++) {
-//       array[i] = oldarray[i];
-//     }
-
-//     capacity = target_capacity;
-
-//     delete [] oldarray;
-//   }
-// }
-
-
 template <typename T>
 LinkedListStack<T>::~LinkedListStack()
 {
