@@ -55,7 +55,6 @@ T ArrayQueue<T>::get_next()// peak at the beginning of the queue
 template <typename T>
 int ArrayQueue<T>::size()
 {
-  cout << capacity<<endl;
   return num_elem;
 }
 

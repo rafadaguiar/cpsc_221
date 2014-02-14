@@ -31,7 +31,7 @@ T LinkedListStack<T>::remove()
   node * temp = new node();
   temp = root;
   root = root->next;
-  temp->next = NULL;
+  delete temp;
   return temp->val;
 }
 

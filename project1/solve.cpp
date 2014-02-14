@@ -20,7 +20,7 @@
 #include "VectorPriorityQueue.hpp"  // WORKING
 #include "LinkedListStack.hpp"      // DONE
 #include "ArrayQueue.hpp"           // DONE
-// #include "HeapPriorityQueue.hpp"    // WORKING
+#include "HeapPriorityQueue.hpp"    // 
 #include "ComparePuzzleBadness.hpp"
 
 #include "NullDict.hpp"             // WORKING
@@ -110,7 +110,7 @@ int main (int argc, char *argv[])
   // For some kinds of puzzles, you will want to pass in a parameter
   // to specify the starting position (e.g., for the 8- or 15-puzzles.)
 
-  startState = new WolfGoatCabbage();
+  // startState = new WolfGoatCabbage();
 
   // startState = new Sudoku("000000000000000000000000000000000000000000000000000000000000000000000000000000000");
 
@@ -118,15 +118,15 @@ int main (int argc, char *argv[])
   // amount of time, try exchanging two adjacent numbers and trying again.
   // startState = new SliderPuzzle(3,3,"8 7 6 5 4 3 2 1 0");
   // startState = new SliderPuzzle(3,4,"11 10 9 8 7 6 5 4 3 1 2 0");
-  // startState = new SliderPuzzle(4,4,"15 14 13 12 11 10 9 8 7 6 5 4 3 1 2 0");
+  startState = new SliderPuzzle(4,4,"15 14 13 12 11 10 9 8 7 6 5 4 3 1 2 0");
 
 
   // Uncomment one of these, to select BFS, DFS, or BestFS
   // Later, you will put declarations here to use your new implementations
   // (ArrayQueue, LinkedListStack, and HeapPriorityQueue).
   
-  LinkedListQueue<PuzzleState*> activeStates; // WORKING
-  cout<<"Using LinkedListQueue"<<endl;
+  // LinkedListQueue<PuzzleState*> activeStates; // WORKING
+  // cout<<"Using LinkedListQueue"<<endl;
 
   // ArrayQueue<PuzzleState*> activeStates; //  (Not working on puzzles)
   // cout << "Using ArrayQueue"<<endl;
@@ -139,15 +139,18 @@ int main (int argc, char *argv[])
   
   // VectorPriorityQueue<PuzzleState*, ComparePuzzleBadness> activeStates;
   // cout<<"Using VectorPriorityQueue"<<endl;
+
+  HeapPriorityQueue<PuzzleState*, ComparePuzzleBadness> activeStates;
+  cout<<"Using HeapPriorityQueue"<<endl;
   
   // Uncomment one of these to pick the dictionary implementation:
   
   // NullDict<PuzzleState*> seenStates;
   // cout<<"Using NullDict"<<endl;
-  LinkedListDict<PuzzleState*, ComparePuzzleState> seenStates; // WORKING
-  cout<<"Using LLDict"<<endl;
-  // BSTDict<PuzzleState*, ComparePuzzleState> seenStates; // DONE
-  // cout<<"Using BSTDict"<<endl;
+  // LinkedListDict<PuzzleState*, ComparePuzzleState> seenStates; // WORKING
+  // cout<<"Using LLDict"<<endl;
+  BSTDict<PuzzleState*, ComparePuzzleState> seenStates; // DONE
+  cout<<"Using BSTDict"<<endl;
 
   vector<PuzzleState*> solution;
 

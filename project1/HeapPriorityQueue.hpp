@@ -45,12 +45,13 @@ template <typename T, class Compare> class HeapPriorityQueue :
     ~HeapPriorityQueue();
     
   private:
-    // TODO: add any private member variables you need
+    // add any private member variables you need
     // and any additional helper functions.
     // 
     // We suggest a member variable that is a vector
     // of type T to hold the elements of the heap.
-
+    vector <T> heap;
+    
     // Heap-related helper functions.
     bool is_root(int index);
     int parent(int index);

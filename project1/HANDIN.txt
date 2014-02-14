@@ -6,39 +6,56 @@ Acknowledgment that you understand and have followed the course's
 collaboration policy (READ IT at
 http://www.ugrad.cs.ubc.ca/~cs221/current/syllabus.shtml#conduct):
 
-Rafael Aguiar
+# Rafael Aguiar
 
 TODO: submit using: make handin-proj1
 
 ----------------------------------------------------------------------
 
-Approximate hours on project: TODO:
+Approximate hours on project: # Around 20h (milestone1 + project)
 
 ----------------------------------------------------------------------
 
-For teams, rough breakdown of work: None(Single)
+For teams, rough breakdown of work: # None(Single)
 
 ----------------------------------------------------------------------
 
-Acknowledgment of assistance: None
+Acknowledgment of assistance: # None
 
 ----------------------------------------------------------------------
 
 High-level (more abstract) description of your stack, queue, priority 
-queue, and BST implementations, including any problems or surprises: TODO:
+queue, and BST implementations, including any problems or surprises:
+    # Just a quick comment about the project: I wish I had more intuition
+    # about BFS, DFS and BestFS before starting the project. It was a little 
+    # akward to build ADT's to work with algorithms that I didn't know, to 
+    # solve problems in the dark.
+
+    # ArrayQueue: 
+        Question: "WARNING: you should copy all the elements of the queue in order
+                   from front to back into the new array (doing the right thing if
+                   the elements "wrap around" past the end of the array), but in
+                   the new array, they should sit at indexes 0 to n-1 instead."
+
+        I'm not sure I understood this warning. Since I was increasing the array
+        whenever it was full, there was no wrap around(it was not circular anymore), and therefore no need to take that into account. 
+        At the end my code work as expected. Please, check this section to see if I miss something.
+
 
 
 ----------------------------------------------------------------------
 
 If you didn't complete Milestone 1, please answer the 10 questions
-in the MILESTONE1.txt file. [Completed]
+in the MILESTONE1.txt file. # [Completed]
 
 ----------------------------------------------------------------------
 
 Question 11:  With your implementation of BSTDict and HeapPriorityQueue,
 how long does BestFS take to solve the 4x4 Slider Puzzle?  Compare
 your answer to your previous answer to Question 9.
-
+  #  Heap_Time = 8.1s
+  #  Vector_Time = 3 minutes and 2.692s
+  #  This can be explained by the naive implementation of the latter(calling max on every insertion).
 ----------------------------------------------------------------------
 
 We will be checking your implementations of ArrayQueue, LinkedListStack,
