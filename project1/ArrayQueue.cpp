@@ -55,11 +55,11 @@ T ArrayQueue<T>::get_next()// peak at the beginning of the queue
 template <typename T>
 int ArrayQueue<T>::size()
 {
-  for (int i = 0; i < capacity; ++i)
-  {
-    cout<<array[i]<<" ";
-  }
-  cout<<endl;
+  // for (int i = 0; i < capacity; ++i)
+  // {
+  //   cout<<array[i]<<" ";
+  // }
+  // cout<<endl;
   return num_elem;
 }
 
