@@ -8,7 +8,7 @@ http://www.ugrad.cs.ubc.ca/~cs221/current/syllabus.shtml#conduct):
 
 # Rafael Aguiar
 
-TODO: submit using: make handin-proj1
+# submit using: make handin-proj1
 
 ----------------------------------------------------------------------
 
@@ -26,20 +26,23 @@ Acknowledgment of assistance: # None
 
 High-level (more abstract) description of your stack, queue, priority 
 queue, and BST implementations, including any problems or surprises:
-    # Just a quick comment about the project: I wish I had more intuition
-    # about BFS, DFS and BestFS before starting the project. It was a little 
-    # akward to build ADT's to work with algorithms that I didn't know, to 
-    # solve problems in the dark.
+    
+    # Just a quick comment about the project: 
+        I wish I had more intuition about BFS, DFS and BestFS before 
+        starting the project. It was a little akward to build ADT's to 
+        work with algorithms that I didn't know, to solve problems in the dark.
 
-    # ArrayQueue: 
-        Question: "WARNING: you should copy all the elements of the queue in order
-                   from front to back into the new array (doing the right thing if
-                   the elements "wrap around" past the end of the array), but in
-                   the new array, they should sit at indexes 0 to n-1 instead."
+    # Description:
+        ArrayQueue: Queue implemented in a c++ pure array. The array is circular and resizeable.
+        LinkedListStack: Stack implemented using linked list.
+        HeapPriorityQueue: min heap implemented in a c++ vector.
+        BSTDict: a binary search tree used as a dict.
 
-        I'm not sure I understood this warning. Since I was increasing the array
-        whenever it was full, there was no wrap around(it was not circular anymore), and therefore no need to take that into account. 
-        At the end my code work as expected. Please, check this section to see if I miss something.
+    # Surprise_ArrayQueue: 
+        I didn't noticed the wrap-around in ensure_capacity possibility 
+        at first, but it was easy to after drawing the case on paper.
+
+
 
 
 

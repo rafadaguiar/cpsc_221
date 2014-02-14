@@ -55,6 +55,11 @@ T ArrayQueue<T>::get_next()// peak at the beginning of the queue
 template <typename T>
 int ArrayQueue<T>::size()
 {
+  for (int i = 0; i < capacity; ++i)
+  {
+    cout<<array[i]<<" ";
+  }
+  cout<<endl;
   return num_elem;
 }
 
@@ -75,11 +80,19 @@ void ArrayQueue<T>::ensure_capacity(int n)
     // the elements "wrap around" past the end of the array), but in
     // the new array, they should sit at indexes 0 to n-1 instead.
 
-    /* I'm not sure I followed this. Why do we need to take that into account if we're always increasing the size?*/
+    int j = 0;
     
-    for(int i = front; i < capacity;i++){
-      new_array[i] = array[i];
+    for(;front < capacity;j++){
+        new_array[j] = array[front];
+        front++;
     } 
+    if(back < front){ // if we wrap around
+      for (int k = 0; k < back; ++k){
+        new_array[j] = array[k];
+        j++;
+      }
+    }
+    
     // Fix front and back and capacity so they correspond to the new array.
     front = 0;
     back = n-1;

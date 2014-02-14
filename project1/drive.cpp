@@ -27,13 +27,13 @@ int main(int argc, char * argv[]) {
 
   //TodoList<int> * todolist = new ArrayStack<int>();  //  WORKING
   // cout << "Using ArrayStack"<<endl;
-  // TodoList<int> * todolist = new ArrayQueue<int>();  // DONE
-  // cout << "Using ArrayQueue"<<endl;
+  TodoList<int> * todolist = new ArrayQueue<int>();  // DONE
+  cout << "Using ArrayQueue"<<endl;
   // TodoList<int> * todolist = new LinkedListStack<int>(); // DONE
   // cout << "Using LinkedListStack"<<endl;
 
-  TodoList<int> * todolist = new HeapPriorityQueue<int,CompareInt>(); // DONE
-  cout << "Using HeapPriorityQueue"<<endl;
+  // TodoList<int> * todolist = new HeapPriorityQueue<int,CompareInt>(); // DONE
+  // cout << "Using HeapPriorityQueue"<<endl;
 
   char command;
   int val;
