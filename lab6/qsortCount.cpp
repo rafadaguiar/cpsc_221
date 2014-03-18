@@ -7,6 +7,16 @@ using namespace std;
 int * x;
 int comps = 0;
 
+float c(int n){
+	// Q4
+	// C(n) = C1 + n^2 + n + C(n^2-n)
+	if(n<=1)return 0;
+	float sum = 0.0;
+	for(int m=1;m <=n; m++){
+		sum += n-1 +c(m-1) + c(n-m);
+	}
+	return sum / n;
+}
 int qc(int n){
 	// Q3
 	if(n==0) return 1;
@@ -44,7 +54,7 @@ void quicksort(int a, int b) {
 	quicksort(m+1, b);
 }
 
-#define NN 1000
+#define NN 20
 
 int main(int argc, char *argv[]) {
 	srand(time(0));
@@ -67,8 +77,7 @@ int main(int argc, char *argv[]) {
 	// cout << endl;
 	cout<<comps/repetitions<<endl;
 	cout<<qc(NN)<<endl;
-	if(comps/repetitions == qc(NN)) cout<<"true"<<endl;
-	else cout<<"false"<<endl;
+	cout<<c(NN)<<endl;
 
 	delete[] x;
 	return 0;
