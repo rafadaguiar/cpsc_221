@@ -15,6 +15,7 @@ public:
 	void printStats();
 	float probeRate();
 	void clean();
+	void ddel(int key);
 
 private:
 	int* table;
